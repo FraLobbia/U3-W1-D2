@@ -4,22 +4,13 @@ import "./App.css";
 import MyNav from "./components/MyNav";
 
 function App() {
+	const navItems = ["Home", "About", "Browse"];
+	const navLinks = ["#", "#", "#"];
 	return (
 		<div className="App">
-			<MyNav></MyNav>
+			<MyNav items={navItems} links={navLinks}></MyNav>
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
 			</header>
 		</div>
 	);
