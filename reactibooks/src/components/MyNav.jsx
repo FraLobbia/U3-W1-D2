@@ -10,7 +10,7 @@ import {
 import navBarConfig from "./dataConfig/navBarConfig.json";
 function MyNav() {
 	return (
-		<Navbar expand="md" data-bs-theme="dark" bg="warning">
+		<Navbar expand="md" data-bs-theme="dark" bg="dark">
 			<Container fluid>
 				<Navbar.Brand href="#">Reactibooks</Navbar.Brand>
 				<Navbar.Toggle className="ms-auto" aria-controls="myNavbar" />
