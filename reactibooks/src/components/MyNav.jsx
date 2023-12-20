@@ -10,16 +10,13 @@ import {
 import navBarConfig from "./dataConfig/navBarConfig.json";
 function MyNav() {
 	return (
-		<Navbar expand="md" className="bg-body-tertiary mb-3">
+		<Navbar expand="md" data-bs-theme="dark" bg="warning">
 			<Container fluid>
 				<Navbar.Brand href="#">Reactibooks</Navbar.Brand>
-				<Navbar.Toggle
-					className="ms-auto"
-					aria-controls="basic-navbar-nav"
-				/>
+				<Navbar.Toggle className="ms-auto" aria-controls="myNavbar" />
 
 				<Navbar.Collapse
-					id="basic-navbar-nav"
+					id="myNavbar"
 					className="justify-content-between"
 				>
 					<Nav>
@@ -32,7 +29,7 @@ function MyNav() {
 						})}
 					</Nav>
 					<Form>
-						<Row>
+						<Row className="justify-content-center">
 							<Col xs="auto">
 								<Form.Control
 									type="text"
