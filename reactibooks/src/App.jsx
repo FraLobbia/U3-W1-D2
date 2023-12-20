@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import MyNav from "./components/MyNav";
@@ -8,7 +7,7 @@ import Welcome from "./components/Welcome";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App bg-dark">
 			<MyNav />
 			<Welcome />
 			<AllTheBooks />
