@@ -4,11 +4,9 @@ import "./App.css";
 import MyNav from "./components/MyNav";
 
 function App() {
-	const navItems = ["Home", "About", "Browse"];
-	const navLinks = ["#", "#", "#"];
 	return (
 		<div className="App">
-			<MyNav items={navItems} links={navLinks}></MyNav>
+			<MyNav />
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 			</header>

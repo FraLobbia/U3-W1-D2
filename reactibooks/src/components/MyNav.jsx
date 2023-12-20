@@ -1,22 +1,53 @@
-import Nav from "react-bootstrap/Nav";
-
-function MyNav(props) {
+import {
+	Nav,
+	Container,
+	Navbar,
+	Form,
+	Row,
+	Col,
+	Button,
+} from "react-bootstrap";
+import navBarConfig from "./dataConfig/navBarConfig.json";
+function MyNav() {
 	return (
-		<Nav variant="tabs" defaultActiveKey="/home">
-			<Nav.Item>
-				<Nav.Link href={props.links["0"]}>{props.items["0"]}</Nav.Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Nav.Link href={props.links["1"]} eventKey="link-1">
-					{props.items["1"]}
-				</Nav.Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Nav.Link href={props.links["2"]} eventKey="link-2">
-					{props.items["2"]}
-				</Nav.Link>
-			</Nav.Item>
-		</Nav>
+		<Navbar expand="md" className="bg-body-tertiary mb-3">
+			<Container fluid>
+				<Navbar.Brand href="#">Reactibooks</Navbar.Brand>
+				<Navbar.Toggle
+					className="ms-auto"
+					aria-controls="basic-navbar-nav"
+				/>
+
+				<Navbar.Collapse
+					id="basic-navbar-nav"
+					className="justify-content-between"
+				>
+					<Nav>
+						{navBarConfig.map((navItem) => {
+							return (
+								<Nav.Link href={navItem.link}>
+									{navItem.name}
+								</Nav.Link>
+							);
+						})}
+					</Nav>
+					<Form>
+						<Row>
+							<Col xs="auto">
+								<Form.Control
+									type="text"
+									placeholder="Cerca un libro qui"
+									className="mr-sm-2"
+								/>
+							</Col>
+							<Col xs="auto">
+								<Button type="submit">Cerca</Button>
+							</Col>
+						</Row>
+					</Form>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
 	);
 }
 
