@@ -12,17 +12,22 @@ function AllTheBooks(props) {
 			<Row>
 				{fantasy.map((book) => {
 					return (
-						<Col xs={6} md={3} lg={2} className="card-group my-2">
+						<Col xs={6} md={4} lg={3} className="card-group my-2">
 							<Card>
 								<Card.Img variant="top" src={book.img} />
-								<Card.Body>
+								<Card.Body className="d-flex flex-column justify-content-start">
 									<Card.Title>{book.title}</Card.Title>
 									<Card.Text>
 										Some quick example text to build on the
 										card title and make up the bulk of the
 										card's content.
 									</Card.Text>
-									<Button variant="primary">Compra</Button>
+									<Button
+										variant="success"
+										className="mt-auto"
+									>
+										Compra
+									</Button>
 								</Card.Body>
 							</Card>
 						</Col>

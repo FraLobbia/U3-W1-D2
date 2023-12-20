@@ -14,7 +14,12 @@ function MyNav() {
 		<Navbar expand="md" data-bs-theme="dark" bg="dark">
 			<Container fluid>
 				<Navbar.Brand href="#">
-					<img src={logo} className="App-logo h-100" alt="logo" />
+					<img
+						src={logo}
+						className="App-logo"
+						alt="logo"
+						style={{ height: "50px" }}
+					/>
 					<span>Reactibooks</span>
 				</Navbar.Brand>
 				<Navbar.Toggle className="ms-auto" aria-controls="myNavbar" />
