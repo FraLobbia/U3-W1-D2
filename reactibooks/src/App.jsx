@@ -8,9 +8,7 @@ function App() {
 	return (
 		<div className="App">
 			<MyNav />
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-			</header>
+
 			<AllTheBooks />
 		</div>
 	);

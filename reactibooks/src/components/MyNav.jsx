@@ -7,12 +7,16 @@ import {
 	Col,
 	Button,
 } from "react-bootstrap";
+import logo from "../logo.svg";
 import navBarConfig from "./dataConfig/navBarConfig.json";
 function MyNav() {
 	return (
 		<Navbar expand="md" data-bs-theme="dark" bg="dark">
 			<Container fluid>
-				<Navbar.Brand href="#">Reactibooks</Navbar.Brand>
+				<Navbar.Brand href="#">
+					<img src={logo} className="App-logo h-100" alt="logo" />
+					<span>Reactibooks</span>
+				</Navbar.Brand>
 				<Navbar.Toggle className="ms-auto" aria-controls="myNavbar" />
 
 				<Navbar.Collapse
