@@ -29,9 +29,12 @@ function MyNav() {
 					className="justify-content-between"
 				>
 					<Nav>
-						{navBarConfig.map((navItem) => {
+						{navBarConfig.map((navItem, index) => {
 							return (
-								<Nav.Link href={navItem.link}>
+								<Nav.Link
+									href={navItem.link}
+									key={`navItem-${index}`}
+								>
 									{navItem.name}
 								</Nav.Link>
 							);

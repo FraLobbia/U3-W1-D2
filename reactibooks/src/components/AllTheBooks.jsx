@@ -10,9 +10,15 @@ function AllTheBooks(props) {
 	return (
 		<Container>
 			<Row>
-				{fantasy.map((book) => {
+				{fantasy.map((book, index) => {
 					return (
-						<Col xs={6} md={4} lg={3} className="card-group my-2">
+						<Col
+							xs={6}
+							md={4}
+							lg={3}
+							className="card-group my-2"
+							key={`book-${index}`}
+						>
 							<Card>
 								<Card.Img variant="top" src={book.img} />
 								<Card.Body className="d-flex flex-column justify-content-start">
